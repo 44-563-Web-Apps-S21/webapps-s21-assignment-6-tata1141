@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Check Boxes 
+        </title>
+    </head>
+ 
+<body>
+
+<h2>Chandra Bhanu Tata builds a bear</h2>
+<form>
+    <label for="form1_hat">Hat </label>
+    <input type ="checkbox" id="form1_hat" name="form1_hat" value=hat> <br>
+    <label for="form1_scarf">scarf</label>
+    <input type ="checkbox" id="form1_scarf" name="form1_scarf" value=scarf> <br>
+
+    <label for="form1_shirt">shirt </label>
+    <input type ="checkbox" id="form1_shirt" name="form1_shirt" autofocus> <br>
+
+    <input type="button" onclick="startbear()" value="Start a bear">
+</form>
+<div id="result">This text will be replaced </div>
+
+<script>
+    var my_bear = {}
+    function startbear()
+    {
+        if(document.getElementById("form1_hat").checked){
+        my_bear["hat"]=true;
+    }else
+    {
+        my_bear["hat"]=false;
+    }
+     if(document.getElementById("form1_scarf").checked){
+        my_bear["scarf"]=true;
+    }else
+    {
+        my_bear["scarf"]=false;
+    }
+    if(document.getElementById("form1_shirt").checked){
+        my_bear["shirt"]=true;
+    }else
+    {
+        my_bear["shirt"]=false;
+    }
+
+    document.getElementById("result").innerHTML = my_bear
+    }
+</script>
+
+<script> 
+
+function resolveForm ()
+{
+    console.log("Getting form values")
+    age = document.getElementById("form1_age").value
+    nick = document.getElementById("form1_nick").value
+    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(confirmed)
+    {
+        out.innerHTML = "Values were confirmed"
+    } else
+    {
+        out.innerHTML = "Values were not confirmed"
+    }
+}
+</script>
+</body>
+</html>
