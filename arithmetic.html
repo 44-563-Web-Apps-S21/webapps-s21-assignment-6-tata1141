@@ -38,5 +38,49 @@ function permutations(){
 }
 </script>
 
+<form>
+    <input type="radio" id="rg1_plus"  value="Plus" name="radio" onchange="processRadio()"  >
+  <label for="rg1_plus">+</label></br>
+
+  <input type="radio" id="rg1_minus" name="radio"  onchange="processRadio()"value="minus">
+  <label for="rg1_minus">-</label></br>
+
+  <input type="radio" id="rg1_times"    name="radio"  onchange="processRadio()"  value="*">
+  <label for="rg1_times">*</label></br>
+
+  <input type="radio" id="rg1_divide"   name="radio"   onchange="processRadio()"  value="/">
+<label for="rg1_divide">/</label></br>
+</form>
+
+<script>
+    function processRadio()
+    {
+        var num1 = document.getElementById("form1_num1").value
+        var num2=document.getElementById("form1_num2").value
+
+        plus = document.getElementById("rg1_plus").checked
+        minus = document.getElementById("rg1_minus").checked
+        times = document.getElementById("rg1_times").checked
+        divide = document.getElementById("rg1_divide").checked
+            if (plus) 
+            {
+                document.getElementById("result2").innerHTML = Number(num1) + Number(num2)
+            }
+            if (minus) 
+            {
+                document.getElementById("result2").innerHTML = num1 - num2
+            }
+            if (times) 
+            {
+                document.getElementById("result2").innerHTML = num1 * num2
+            }
+            if (divide) 
+            {
+                document.getElementById("result2").innerHTML = num1 / num2
+            }
+    }
+</script>
+<div id ="result2"></div>
+
 </body>
 </html> 
