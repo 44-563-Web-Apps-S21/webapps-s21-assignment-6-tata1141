@@ -2,22 +2,48 @@
 <html>
 <head>
 <title>
-    Checkboxes 
+    Check Boxes 
 </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+#header{
+    color:blue
+}
+.boxes{
+    padding: 5px;
+    color:red;
+}
+#result2{
+    background-color:lightblue;
+}
+#result{
+    color:rgb(65, 54, 209)
+}
+</style>
 </head>
 <body>
-
+<div id="header">
 <h2>Chandra Bhanu Tata builds a bear</h2>
+</div>
+
 <form>
+    <div class="boxes">
     <label for="form1_hat">Hat </label>
     <input type ="checkbox" id="form1_hat" name="form1_hat" value=hat> <br>
-
+</div>
+<div class="boxes">
     <label for="form1_scarf">scarf</label>
     <input type ="checkbox" id="form1_scarf" name="form1_scarf" value=scarf> <br>
-
+</div>
+<div class="boxes">
     <label for="form1_shirt">shirt </label>
     <input type ="checkbox" id="form1_shirt" name="form1_shirt" autofocus> <br>
-
+</div class="boxes">
     <input type="button" onclick="startbear()" value="Start a bear">
 </form>
 
